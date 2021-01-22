@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import pizza from "../src/assets/uthappizza.png";
+import cake from "../src/assets/elaicheesecake.png";
+import pakoda from "../src/assets/zucchipakoda.png";
+import "./App.css";
+
+class App extends Component {
+  render() {
+    var imageLinks = [pizza, cake, pakoda];
+    var cards = imageLinks.map((i, index) => {
+      return (
+        <div className="col-md-4" key={index}>
+          <Card image={i} />
+        </div>
+      );
+    });
+    return (
+      <div className="App container-fluid ">
+        <header className="App-header">
+          <Header />
+        </header>
+        <section>
+          <div className="row">
+            <div className="col-2 ">
+              <Sidebar />
+            </div>
+
+            <div className="col-9  cards">
+              <div className="row">{cards}</div>
+            </div>
+          </div>
+        </section>
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

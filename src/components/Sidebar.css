@@ -1,0 +1,24 @@
+.sidebar{
+    position : fixed;
+    left: 0;
+    height: 100vh;
+    width:15vw;
+    background-color: white;
+    font-size: larger;
+    font-weight: bolder;
+    color:black;
+    
+    
+    
+    
+    
+}
+
+.s-text{
+   position: relative;
+    margin-top: auto;
+    padding:15px;
+    top:40%;
+    z-index:50;
+    font-weight: bolder;
+}

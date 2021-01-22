@@ -1,0 +1,16 @@
+.header-text{
+    
+    font-weight: bolder;
+}
+
+.header{
+    position: absolute;
+    left:0;
+    top:0;
+    padding: 0.7em 0em;
+    height: 8vh;
+    width: 100%;
+    background-color: #2F2fa2;
+    border-radius: 0 0px 25px 25px ;
+    z-index:10;
+}
